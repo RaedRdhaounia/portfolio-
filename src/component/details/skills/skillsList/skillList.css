@@ -1,0 +1,28 @@
+.skillList {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  flex-flow: wrap;
+  height: 469px;
+  overflow-y: scroll;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 1px;
+}
+
+
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.24); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  width: 10px;
+  height: 1px !;
+  background: rgb(62, 62, 85); 
+}
