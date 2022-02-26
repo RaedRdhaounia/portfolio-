@@ -1,3 +1,12 @@
 .card{
     padding: 10px;
 }
+img {
+    
+    transition: filter 0.4s ease-in-out;
+    filter: grayscale();
+  }
+  img:hover {
+    opacity: 1;
+    filter: none;
+  }

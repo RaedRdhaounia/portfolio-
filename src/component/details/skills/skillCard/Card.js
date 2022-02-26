@@ -1,6 +1,6 @@
 import * as React from "react";
 import { styled } from "@mui/material/styles";
-import './Card.css'
+import "./Card.css";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
@@ -14,10 +14,6 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
-
-
-
-
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
   return <IconButton {...other} />;
@@ -29,62 +25,43 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-
-
-
 export default function RecipeReviewCard({ el }) {
   const [expanded, setExpanded] = React.useState(false);
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
 
-
-
-  return (<div className='card'>
-    <Card sx={{ maxWidth: 345 }} style={{backgroundColor :'transparent'}} >
-      <CardHeader style={{backgroundColor :'transparent'}}
-        
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title={el.skill.name}
-        subheader="when"
-      />
-      <CardMedia
-        component="img"
-        className='image'
-        image={el.skill.source}  
-        alt="skill logo" 
-        /*style={{height:170}} */
-      />
-      <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          "description"
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon color="success" />
-        </IconButton>
-        <ExpandMore
-          expand={expanded}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </ExpandMore>
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
+  return (
+    <div className="card">
+      <Card sx={{ maxWidth: 345 }} style={{ backgroundColor: "transparent" }}>
+        <CardHeader
+          style={{ backgroundColor: "transparent" }}
+          action={
+            <IconButton aria-label="settings">
+              <MoreVertIcon />
+            </IconButton>
+          }
+          title={el.skill.name}
+          subheader={el.skill.date}
+        />
+        <CardMedia
+          component="img"
+          className="image"
+          image={el.skill.source}
+          alt="skill logo"
+          /*style={{height:170}} */
+        />
         <CardContent>
-          <Typography paragraph>
-            "deep descreption"
+          <Typography variant="body2" color="text.secondary">
+            {el.skill.title}
           </Typography>
         </CardContent>
-      </Collapse>
-    </Card>
+        <CardActions disableSpacing>
+          <IconButton aria-label="add to favorites">
+            <FavoriteIcon color="success" />
+          </IconButton>
+        </CardActions>
+      </Card>
     </div>
   );
 }

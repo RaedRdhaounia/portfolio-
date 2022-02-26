@@ -10,7 +10,6 @@ import gomycode from "./image/gomycode.png";
 import fsgf from "./image/fsgf.png";
 import IPEI from "./image/IPEI.png";
 import Educat from "./image/education.png";
-import Agr from "./image/minagr.png";
 
 export default function AlignItemsList() {
   return (
@@ -19,9 +18,37 @@ export default function AlignItemsList() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        paddingBottom: 2
+        paddingBottom: 2,
       }}
     >
+      <ListItem alignItems="flex-start">
+        <ListItemAvatar>
+          <Avatar
+            alt="wethink"
+            src={
+              "https://scontent.ftun4-1.fna.fbcdn.net/v/t1.6435-9/118512317_167591294861288_5421313545268029938_n.png?_nc_cat=106&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=Bn0Onpjs2zcAX_m6J-X&_nc_ht=scontent.ftun4-1.fna&oh=00_AT8OF1hOBBgQIgX2fxf6mOYDx_j4aT3k7w0UDQoDmX498w&oe=62406DF2"
+            }
+          />
+        </ListItemAvatar>
+        <ListItemText
+          primary="Wethink"
+          secondary={
+            <React.Fragment>
+              <Typography
+                sx={{ display: "inline" }}
+                component="span"
+                variant="body2"
+                color="text.primary"
+              >
+                14 Junary 2022 - 14 february 2022 <br />
+              </Typography>
+              {
+                "Stagiaire en développement Web to improve group work skills and get a look at the startup's envirement"
+              }
+            </React.Fragment>
+          }
+        />
+      </ListItem>
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
           <Avatar alt="GoMyCode logo" src={gomycode} />
@@ -37,10 +64,14 @@ export default function AlignItemsList() {
                 color="text.primary"
               >
                 31 August 2021 - 14 Juanary 2022
+                <br />
               </Typography>
               {
-                "A full stack developer, also called generalist developer, versatile developer or more familiarly 'all-purpose developer', is a coder capable of programming a site or a web application both in front-end and back- end"
+                "A full stack developer JavaScript,apable of programming a site or a web application both in front-end "
               }
+              <b style={{ color: "#1976d2" }}>Reactjs</b>
+              {" and back- end "}
+              <b style={{ color: "#1976d2" }}>nodeJs, MongoDB</b>
             </React.Fragment>
           }
         />
@@ -61,37 +92,16 @@ export default function AlignItemsList() {
                 color="text.primary"
               >
                 12 september 2016- 30 Juin 2020
+                <br />
               </Typography>
               {
-                "A physicist is a scientist who studies the field of physics, that is, the science analyzing the fundamental constituents of the universe (on all scales) and the forces that connect them. The word physicist derives from the Greek, which knows nature."
+                "A physicist is a scientist who studies the field of physics analyzing the fundamental constituents."
               }
             </React.Fragment>
           }
         />
       </ListItem>
-      <ListItem alignItems="flex-start">
-        <ListItemAvatar>
-          <Avatar alt="minestry of agriculture" src={Agr} />
-        </ListItemAvatar>
-        <ListItemText
-          primary="agriculture certificate"
-          secondary={
-            <React.Fragment>
-              <Typography
-                sx={{ display: "inline" }}
-                component="span"
-                variant="body2"
-                color="text.primary"
-              >
-                15 March 2015 - 1 October 2015
-              </Typography>
-              {
-                "A farmer is a person who, professionally or not, cultivates the land or raises animals."
-              }
-            </React.Fragment>
-          }
-        />
-      </ListItem>
+
       <Divider variant="inset" component="li" />
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
@@ -107,11 +117,9 @@ export default function AlignItemsList() {
                 variant="body2"
                 color="text.primary"
               >
-                4 septembre 2013 - 24 junary 2015
+                4 septembre 2013 - 24 July 2015
               </Typography>
-              {
-                "An engineer is a professional dealing with complex engineering problems, in particular by designing products, processes if necessary with innovative means, and directing the realization and the implementation of the whole."
-              }
+              {"2 years passed with the section of physics-chimie"}
             </React.Fragment>
           }
         />
@@ -133,9 +141,7 @@ export default function AlignItemsList() {
               >
                 26 July 2013
               </Typography>
-              {
-                "The baccalauréat, often known in France colloquially as the bac, is a French national academic qualification that students can obtain at the completion of their secondary education"
-              }
+              {"Got it with mention very good , section experimental science"}
             </React.Fragment>
           }
         />
