@@ -18,7 +18,7 @@ export default function AlignItemsList() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        paddingBottom: 2,
+        paddingBottom: 5,
       }}
     >
       <ListItem alignItems="flex-start">
